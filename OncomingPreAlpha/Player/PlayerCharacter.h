@@ -114,7 +114,9 @@ public:
     
     class Utilities {
     public:
-        Utilities();
+        APlayerCharacter* player;
+        
+        Utilities(APlayerCharacter* player);
         
         FVector GetPosition();
     };

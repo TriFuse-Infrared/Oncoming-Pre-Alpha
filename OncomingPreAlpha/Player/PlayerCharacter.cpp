@@ -40,7 +40,7 @@ APlayerCharacter::APlayerCharacter(const class FObjectInitializer& PCIP) : Super
     
     selectedQuickSlot = Primary;
     
-    Utils = Utilities();
+    Utils = Utilities(&this);
 }
 
 UItemRegistry* registry;
@@ -407,6 +407,7 @@ void APlayerCharacter::UpdateSpeed() const {
     
     GetCharacterMovement()->MaxWalkSpeed = maxSpeed;
     GetCharacterMovement()->MaxWalkSpeedCrouched = 0.5 * maxSpeed;
+    GetTransform().GetLocation();
 }
 
 
@@ -424,12 +425,12 @@ void APlayerCharacter::UpdateSpeed() const {
 */
 
 
-APlayerCharacter::Utilities::Utilities() {
-    UE_LOG(OncomingOutput, Warning, TEXT("LOADED!"))
+APlayerCharacter::Utilities::Utilities(APlayerCharacter* player) {
+    this.player = player;
 }
 
 FVector APlayerCharacter::Utilities::GetPosition() {
-    return FVector(0, 0, 0);
+    return player.GetTransform().GetLocation();
 }
 
 
