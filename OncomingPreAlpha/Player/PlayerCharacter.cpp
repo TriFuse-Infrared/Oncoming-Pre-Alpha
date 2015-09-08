@@ -32,15 +32,13 @@
 #include "InventoryComponent.h"
 
 // Sets default values
-APlayerCharacter::APlayerCharacter(const class FObjectInitializer& PCIP) : Super() {
+APlayerCharacter::APlayerCharacter(const class FObjectInitializer& PCIP) : Super(), Utils(Utilities(this)) {
     // Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
     PrimaryActorTick.bCanEverTick = true;
     CreateComponentFromTemplate(NewObject<UInventoryComponent>());
     GetCharacterMovement()->GetNavAgentPropertiesRef().bCanCrouch = true;
     
     selectedQuickSlot = Primary;
-    
-    Utils = Utilities(&this);
 }
 
 UItemRegistry* registry;
@@ -426,11 +424,15 @@ void APlayerCharacter::UpdateSpeed() const {
 
 
 APlayerCharacter::Utilities::Utilities(APlayerCharacter* player) {
-    this.player = player;
+    this->player = player;
 }
 
 FVector APlayerCharacter::Utilities::GetPosition() {
-    return player.GetTransform().GetLocation();
+    return player->GetTransform().GetLocation();
+}
+
+FVector APlayerCharacter::Utilities::GetForwards() {
+    return player->GetActorForwardVector();
 }
 
 

@@ -62,4 +62,16 @@ public:
     UTexture2D* Icon; // Should be 200x200px
     
     UMeshComponent* Mesh;
+    
+    
+    
+    /* Assertions to make sure it is actually clothing */
+    bool isHat      = false;
+    bool isShirt    = false;
+    bool isBag      = false;
+    bool isVest     = false;
+    bool isPants    = false;
+    bool isShoes    = false;
+
+    bool isAccessory = false;
 };

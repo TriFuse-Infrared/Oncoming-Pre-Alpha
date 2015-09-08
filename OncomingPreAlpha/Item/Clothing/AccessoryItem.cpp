@@ -12,6 +12,8 @@ AAccessoryItem::AAccessoryItem(const FObjectInitializer& ObjectInitializer) : Su
     Name = "Accessory";
     Description = "Useless Accessory. You should not have this...";
     Weight = 0.0f;
+    
+    isAccessory = true;
 }
 
 void AAccessoryItem::AccessoryPress(APlayerCharacter *player) {

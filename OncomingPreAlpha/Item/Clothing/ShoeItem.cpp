@@ -13,4 +13,6 @@ AShoeItem::AShoeItem(const FObjectInitializer& ObjectInitializer) : Super(Object
     Name = "Shoes"; // Set the name
     Description = "In any other game, these would let you run super fast! You should not have this..."; // Set the description
     Weight = 0.0f; // Set the weight
+    
+    isShoes = true;
 }

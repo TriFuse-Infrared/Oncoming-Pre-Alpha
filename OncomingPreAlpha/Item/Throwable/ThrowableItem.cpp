@@ -42,7 +42,6 @@ void AThrowableItem::TertiaryPress(APlayerCharacter* player) {
 }
 
 void AThrowableItem::Throw(APlayerCharacter* player) {
-    player->Utils.GetPosition().X;
-    
+    player->Utils.GetForwards();
     
 }

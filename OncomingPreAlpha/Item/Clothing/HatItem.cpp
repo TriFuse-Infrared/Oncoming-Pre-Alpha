@@ -34,4 +34,6 @@ AHatItem::AHatItem(const FObjectInitializer& ObjectInitializer) : Super(ObjectIn
     Name = "Hat"; // Set the name
     Description = "A not very not so non-magical hat. You should not have this..."; // Set the description
     Weight = 0.0f; // Set the weight
+    
+    isHat = true;
 }

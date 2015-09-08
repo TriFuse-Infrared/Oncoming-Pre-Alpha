@@ -13,4 +13,6 @@ AShirtItem::AShirtItem(const FObjectInitializer& ObjectInitializer) : Super(Obje
     Name = "Shirt"; // Set the name
     Description = "Wow! You managed to hack in a useless shirt. You should not have this..."; // Set the description
     Weight = 0.0f; // Set the weight
+    
+    isShirt = true;
 }

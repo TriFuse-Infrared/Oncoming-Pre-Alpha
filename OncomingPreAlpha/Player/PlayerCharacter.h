@@ -119,6 +119,7 @@ public:
         Utilities(APlayerCharacter* player);
         
         FVector GetPosition();
+        FVector GetForwards();
     };
     
     Utilities Utils;

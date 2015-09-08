@@ -13,4 +13,6 @@ APantsItem::APantsItem(const FObjectInitializer& ObjectInitializer) : Super(Obje
     Name = "Pants"; // Set the name
     Description = "Poorly designed trousers with no width. You should not have this..."; // Set the description
     Weight = 0.0f; // Set the weight
+    
+    isPants = true;
 }

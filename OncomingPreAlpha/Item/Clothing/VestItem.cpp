@@ -13,4 +13,6 @@ AVestItem::AVestItem(const FObjectInitializer& ObjectInitializer) : Super(Object
     Name = "Vest"; // Set the name
     Description = "Magical bullet-proof vest that stops 0% of bullets. You should not have this..."; // Set the description
     Weight = 0.0f; // Set the weight
+    
+    isVest = true;
 }

@@ -127,14 +127,14 @@ AItem* UInventoryComponent::GetFromIndex(int Index) {
 void UInventoryComponent::SetFromIndex(int Index, AItem* Item) {
     
     if(Index < 0) {
-        if(Index == -10)        Accessory = Cast<AAccessoryItem>(Item);
+        if(Index == -10 && Item->isAccessory)   Accessory = Cast<AAccessoryItem>(Item);
         
-        if(Index == -9)         Shoes = Cast<AShoeItem>(Item);
-        else if(Index == -8)    Pants = Cast<APantsItem>(Item);
-        else if(Index == -7)    Bag   = Cast<ABagItem>(Item);
-        else if(Index == -6)    Vest  = Cast<AVestItem>(Item);
-        else if(Index == -5)    Shirt = Cast<AShirtItem>(Item);
-        else if(Index == -4)    Hat   = Cast<AHatItem>(Item);
+        if(Index == -9 && Item->isShoes)        Shoes   = Cast<AShoeItem>(Item);
+        else if(Index == -8 && Item->isPants)   Pants   = Cast<APantsItem>(Item);
+        else if(Index == -7 && Item->isShoes)   Bag   = Cast<ABagItem>(Item);
+        else if(Index == -6 && Item->isVest)    Vest   = Cast<AVestItem>(Item);
+        else if(Index == -5 && Item->isShirt)   Shirt   = Cast<AShirtItem>(Item);
+        else if(Index == -4 && Item->isHat)     Hat   = Cast<AHatItem>(Item);
         
         if(Index == -3)         TertiarySlot  = Item;
         else if(Index == -2)    SecondarySlot = Item;

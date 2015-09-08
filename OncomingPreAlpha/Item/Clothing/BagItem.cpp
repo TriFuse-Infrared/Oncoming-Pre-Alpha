@@ -16,5 +16,5 @@ ABagItem::ABagItem(const FObjectInitializer& ObjectInitializer) : Super(ObjectIn
     
     Storage.Init(NULL, 20);
     
-    if(GetWorld()) AddToStorage(GetWorld()->SpawnActor<AClothingItem>());
+    isBag = true;
 }
