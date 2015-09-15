@@ -127,9 +127,9 @@ AItem* UInventoryComponent::GetFromIndex(int Index) {
 void UInventoryComponent::SetFromIndex(int Index, AItem* Item) {
     
     if(Index < 0) {
-        if(Index == -10 && Item->isAccessory)   Accessory = Cast<AAccessoryItem>(Item);
+        if(Index == -10 && (!Item || Item->isAccessory))   Accessory = Cast<AAccessoryItem>(Item);
         
-        if(Index == -9 && Item->isShoes)        Shoes   = Cast<AShoeItem>(Item);
+        if(Index == -9 && (!Item || Item->isShoes))        Shoes   = Cast<AShoeItem>(Item);
         else if(Index == -8 && (!Item || Item->isPants))   Pants   = Cast<APantsItem>(Item);
         else if(Index == -7 && (!Item || Item->isShoes))   Bag   = Cast<ABagItem>(Item);
         else if(Index == -6 && (!Item || Item->isVest))    Vest   = Cast<AVestItem>(Item);
