@@ -1,5 +1,25 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
+/*
+ 
+ ____________   ______   ____________   _________  ___      ___   ______   ______
+ |____   ____| |  ___ \  |____   ____| |  _______| |  |    |  |  /  ____|  |  ___|
+      |  |     | |___) |      |  |     |  |        |  |    |  | |  |       |  |
+      |  |     |    __/       |  |     |  |______  |  |    |  |  \  \___   |  |___
+      |  |     |  _ \         |  |     |  _______| |  |    |  |   \__   \  |  ___|
+      |  |     | | \ \        |  |     |  |        |  |    |  |      \   | |  |
+      |  |     | |  \ \   ____|  |___  |  |         \  \__/  /   ____/  /  |  |___
+      |__|     |_|   \_\ |___________| |__|          \______/    |_____/   |_____|
+ 
+ 
+ 
+ -----------------------------------------------------------------------------------
+ 
+ 
+ 
+ Oncoming Inventory Code - Written by AidoP, Property of Trifuse
+ 
+ Description - Handles items in the three Quick Slots, and the clothing, as well as translating indexes and swapping items around
+ 
+ */
 #include "OncomingPreAlpha.h"
 #include "InventoryComponent.h"
 #include "OncomingGameInstance.h"
